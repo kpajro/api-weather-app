@@ -17,12 +17,12 @@ app.use(cors({
 
 
 const pool = mysql.createPool({
-    host: env.host,
-    user: env.user,
-    password: env.password,
-    database: env.database,
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "weatherapp",
     waitForConnections: true,
-    connectionLimit: 10, 
+    connectionLimit: 100, 
     queueLimit: 0
 });
 

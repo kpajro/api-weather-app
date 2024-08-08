@@ -22,7 +22,7 @@ const pool = mysql.createPool({
     password: "",
     database: "weatherapp",
     waitForConnections: true,
-    connectionLimit: 100, 
+    connectionLimit: 10, 
     queueLimit: 0
 });
 

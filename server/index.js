@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql2/promise"); // Use promise-based mysql2
+const mysql = require("mysql2/promise");
 const cors = require("cors");
 
 const PORT = process.env.PORT || 7174;
@@ -17,12 +17,12 @@ app.use(cors({
 
 
 const pool = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "weatherapp",
+    host: env.host,
+    user: env.user,
+    password: env.password,
+    database: env.database,
     waitForConnections: true,
-    connectionLimit: 100, 
+    connectionLimit: 10, 
     queueLimit: 0
 });
 

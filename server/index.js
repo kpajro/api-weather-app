@@ -17,12 +17,12 @@ app.use(cors({
 
 
 const pool = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "weatherapp",
+    host: "b53zwczmaolljw37hn7l-mysql.services.clever-cloud.com",
+    user: "upcdru6vijrwied9",
+    password: "KhgSGhgxwhQ2Njlaflir",
+    database: "b53zwczmaolljw37hn7l",
     waitForConnections: true,
-    connectionLimit: 100, 
+    connectionLimit: 10, 
     queueLimit: 0
 });
 

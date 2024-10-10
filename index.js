@@ -10,7 +10,7 @@ const app = express();
 const error404 = "Image not found.";
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://kpajro.github.io'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -31,7 +31,6 @@ app.get("/api", (req, res) => {
     res.json("/api/hot /api/cold /api/rain");
 });
 
-// Call everything
 app.get("/api/:table", async (req, res) => {
     const table = req.params.table;
     let connection;
@@ -48,7 +47,6 @@ app.get("/api/:table", async (req, res) => {
     }
 });
 
-// Call specific
 app.get("/api/:table/:name", async (req, res) => {
     const table = req.params.table;
     const name = req.params.name;
